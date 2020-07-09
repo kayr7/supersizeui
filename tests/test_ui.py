@@ -18,7 +18,7 @@ def NOTONGITHUBtest_screengrabber():
     im.close()
 
 
-def test_screengrabber_iteration():
+def NOTONGITHUBtest_screengrabber_iteration():
     screengrabber = screengrab.ScreenGrabber(10, 10, 100, 100)
     t = process_time()
     for _ in range(100):
