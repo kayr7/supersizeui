@@ -8,7 +8,7 @@ from time import process_time
 import pytest
 
 
-def test_screengrabber():
+def NOTONGITHUBtest_screengrabber():
     screengrabber = screengrab.ScreenGrabber(10, 10, 100, 100)
     im = screengrabber.get_image()
     assert im.width == 90
