@@ -55,8 +55,6 @@ class App(QWidget):
 
 
 app = QApplication(sys.argv)
-
 window = App()
 window.show()
-
 app.exec_()
