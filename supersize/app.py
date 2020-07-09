@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QLabel
 from PyQt5.QtGui import QPixmap, QImage
@@ -27,10 +25,8 @@ class App(QWidget):
         self.setWindowTitle(self.title)
         self.setGeometry(self.left, self.top, self.width, self.height)
 
-        # Create widget
         self.label = QLabel(self)
 
-        # img.close()
         timer = QtCore.QTimer(self)
         timer.timeout.connect(self.show_image)
         timer.start(40)
