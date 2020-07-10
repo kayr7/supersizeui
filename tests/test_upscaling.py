@@ -11,7 +11,7 @@ from PIL import Image
 def test_upscaler():
     ups = upscaler.Upscaler()
     img = Image.open("./box.png")
-    new_img = ups.upscale(2, img)
+    new_img = ups.upscale(img, 2)
     assert new_img.width == 2 * img.width
     assert new_img.height == 2 * img.height
     img.close()
