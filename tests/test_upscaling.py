@@ -3,7 +3,7 @@ import os
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from supersize import upscaler
-from supersize import infer
+from supersize import ganupscaler
 
 from PIL import Image
 
@@ -19,7 +19,7 @@ def test_upscaler():
 
 def test_gan_upscale():
     img = Image.open("/Users/rottmann/Coding/realtime_superresolution/box.png")
-    upsc = infer.GanUpscaler()
+    upsc = ganupscaler.GanUpscaler()
     assert upsc.model is not None
     up_img = upsc.upscale(img)
 
