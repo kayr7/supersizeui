@@ -19,7 +19,7 @@ class App(QWidget):
         self.width = 100
         self.height = 100
         self.screengrabber = screengrab.ScreenGrabber(10, 10, 50, 50)
-        self.upscaler = infer.GanUpscaler()
+        self.upscaler = ganupscaler.GanUpscaler()
         self.initUI()
 
     def initUI(self):
