@@ -8,7 +8,7 @@ from PIL import Image
 class GanUpscaler:
     def __init__(self):
         self.Model = None
-        self.load_model("supersize/FAST-SRGAN/models/generator.h5")
+        self.load_model("supersize/model/generator.h5")
         pass
 
     def load_model(self, file):

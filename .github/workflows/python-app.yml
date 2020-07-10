@@ -35,7 +35,10 @@ jobs:
           pytest
       - name: Coverage with pytest
         run: |
-          coverage run --source=. -m py.test
+          pytest --cov=./ --cov-report=xml
       - name: Upload coverage
-        shell: pwsh
-        run: coverage report -m
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          file: ./coverage.xml
+          flags: unittests
