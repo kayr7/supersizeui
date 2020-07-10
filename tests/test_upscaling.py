@@ -18,7 +18,7 @@ def test_upscaler():
 
 
 def test_gan_upscale():
-    img = Image.open("/Users/rottmann/Coding/realtime_superresolution/box.png")
+    img = Image.open("./box.png")
     upsc = ganupscaler.GanUpscaler()
     assert upsc.model is not None
     up_img = upsc.upscale(img)
