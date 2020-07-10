@@ -7,6 +7,7 @@ from PIL import Image
 
 import screengrab
 import upscaler
+import ganupscaler
 
 
 class App(QWidget):
@@ -15,10 +16,10 @@ class App(QWidget):
         self.title = "PyQt5 image - pythonspot.com"
         self.left = 100
         self.top = 10
-        self.width = 640
-        self.height = 480
-        self.screengrabber = screengrab.ScreenGrabber(10, 10, 300, 300)
-        self.upscaler = upscaler.Upscaler()
+        self.width = 100
+        self.height = 100
+        self.screengrabber = screengrab.ScreenGrabber(10, 10, 50, 50)
+        self.upscaler = infer.GanUpscaler()
         self.initUI()
 
     def initUI(self):
@@ -33,7 +34,7 @@ class App(QWidget):
         self.show_image()
 
     def show_image(self):
-        img = self.pil2pixmap(self.upscaler.upscale(2, self.screengrabber.get_image()))
+        img = self.pil2pixmap(self.upscaler.upscale(self.screengrabber.get_image()))
         self.label.setPixmap(img)
         self.resize(img.width(), img.height())
 
