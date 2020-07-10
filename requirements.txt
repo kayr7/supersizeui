@@ -1,6 +1,5 @@
 Pillow
 pyscreenshot
 pyqt5
-tensorflow==2.0.1
-opencv-python==4.1.1.26
+tensorflow
 numpy==1.17.2
