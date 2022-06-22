@@ -2,4 +2,4 @@ Pillow
 pyscreenshot
 pyqt5
 tensorflow
-numpy==1.17.2
+numpy==1.22.0
